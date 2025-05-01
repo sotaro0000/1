@@ -1,0 +1,162 @@
+/* リセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ヘッダー全体 */
+.Header {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+/* ロゴ */
+.HeaderLogo__image {
+  height: 40px;
+}
+
+/* ヘッダー内のコンテナ */
+.HeaderContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ナビゲーション全体 */
+.HeaderNav {
+  display: flex;
+  align-items: center;
+}
+
+/* ナビゲーションリスト */
+.HeaderNavList {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* 各メニューアイテム */
+.HeaderNavListItem__link {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* CONTENT（英語）を大きく */
+.HeaderNavListItem__link span:first-child {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* 学習内容（日本語）を小さめに */
+.HeaderNavListItem__link span:last-child {
+  font-size: 12px;
+  color: #777;
+}
+
+/* 無料カウンセリングボタン */
+.HeaderNavListItem__button {
+  padding: 8px 16px;
+  background-color: #f79214;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.HeaderNavListItem__button:hover {
+  background-color: #e68300;
+}
+
+/* hover時のリンク色変更 */
+.HeaderNavListItem__link:hover span:first-child {
+  color: #f79214;
+}
+
+/* ファーストビュー */
+.FirstView {
+  position: relative;
+  padding: 100px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+/* ファーストビューの画像 */
+.FirstView__bg-image,
+.FirstView__whole-image {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ファーストビューのコンテンツ */
+.FirstViewContent__title {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.FirstViewContent__badge-image {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 80px;
+}
+
+/* 無料カウンセリングボタン */
+.FirstViewContent__button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f79214;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 15px;
+  transition: background-color 0.3s;
+}
+
+.FirstViewContent__button:hover {
+  background-color: #e68300;
+}
+
+/* キャプション */
+.FirstViewContent__caption {
+  font-size: 10px;
+  color: #777;
+  line-height: 1.4;
+}
+
+/* レスポンシブ調整例（任意） */
+@media (max-width: 768px) {
+  .HeaderContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .HeaderNavList {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .HeaderNavListItem__link {
+    align-items: flex-start;
+  }
+
+  .FirstViewContent__title {
+    font-size: 22px;
+  }
+}
